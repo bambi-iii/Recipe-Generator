@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Is It: Recipe Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Apply the Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .no-inter {
+            font-family: 'Monotype Corsiva', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('first bg.png');">
+        <!-- Logo -->
+        <div class="absolute top-4" style="left: 51px;">
+            <img src="logo.png" alt="Dish Is It Logo" class="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-32 w-auto">
+        </div>
+        <!-- Create Account title-->
+        <div class="absolute top-[280px] left-6 ml-[90px] text-[#545454]">
+            <div class="text-[30px] mt-5 font-bold">Create new account</div>
+            <div class="text-[20px] mt-[2px]">Already have an account? <a href="Log In Page.html" class="text-green-600 hover:underline">Log in</a></div>
+
+            <!--First Name & Last Name-->
+            <div class="mt-[15px] flex space-x-3">
+                <input type="firstName" id="firstName" name="firstName" 
+                class="text-[20px] w-[304px] h-[40px] mt-1 px-4 py-2 bg-transparent border-[2px] border-[#545454] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#545454]" 
+                placeholder="First Name" required>
+                <input type="lastName" id="lastName" name="lastName" 
+                class="text-[20px] w-[304px] h-[40px] mt-1 px-4 py-2 bg-transparent border-[2px] border-[#545454] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#545454]" 
+                placeholder="Last Name" required>
+            </div>
+
+            <!--Email-->
+            <div class="mt-[15px]">
+                <input type="email" id="email" name="email" 
+                class="text-[20px] w-[620px] h-[40px] mt-1 px-4 py-2 bg-transparent border-[2px] border-[#545454] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#545454]" 
+                placeholder="Email" required>
+            </div>
+
+            <!--Password-->
+            <div class="text-[20px] mt-[15px] relative">
+                <input type="password" id="password" name="password"
+                class="w-[620px] h-[40px] mt-1 px-4 py-2 bg-transparent border-[2px] border-[#545454] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#545454] pr-12" 
+                placeholder="Password" required>
+                
+                <!--Eye icon-->
+                <button type="button" 
+                        class="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-500" 
+                        onclick="togglePassword()">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </div>
+            <div class="mt-[20px]">
+                <button type="submit"
+                class="w-full bg-[#545454] text-white py-2 rounded-lg hover:bg-[#7a736a] transition duration-200">Create account</button>
+            </div>
+
+            <div class="mt-4 flex items-center justify-center">
+                <div class="flex-grow border-t border-gray-500"></div>
+                <span class="mx-4 text-gray-500 text-[18px]">or</span>
+                <div class="flex-grow border-t border-gray-500"></div>
+            </div>
+            
+            <!-- Google Button -->
+            <div class="mt-4">
+                <button class="w-full flex items-center justify-center border-[1px] border-[#545454] text-gray-600 py-2 rounded-lg hover:bg-[#bdbdbd] transition duration-200">
+                    <img src="google-icon.png" alt="Google Icon" class="h-5 w-5 mr-2">
+                    Google
+                </button>
+            </div>            
+        </div>
+    </div>
+
+    <!--Script for password toggle-->
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var icon = document.querySelector(".fas");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";  // Show password
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";  // Hide password
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Is It: Recipe Generator</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-icon:hover {
+            cursor: pointer;
+        }
+        .search-icon { 
+            position: absolute;
+            left: 150px;
+            top: 16%;
+            transform: translateY(-50%); 
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen" style="background-image: url('first bg.png');">
+        <!-- Left Sidebar -->
+        <div class="w-[100px] bg-[#fbf8e9] shadow-lg p-4 rounded-r-[30px] flex flex-col justify-between" style="height: calc(100vh - 40px); margin-top: 20px;">
+            <!-- Logo -->
+            <div class="mb-8 flex justify-center">
+                <img src="logo1.png" alt="Logo" class="w-18 h-18">
+            </div>
+            <!-- Navigation Icons -->
+            <div class="flex flex-col justify-center flex-grow space-y-20 items-center nav-icon">
+                <img src="home-inactive.png" alt="Home" class="w-8 h-8">
+                <img src="user-inactive.png" alt="Profile" class="w-8 h-8">
+                <img src="fave-inactive.png" alt="Favorites" class="w-8 h-8">
+            </div>
+            <!-- Exit Button -->
+            <button class="mt-auto text-red-500 hover:text-red-700 mx-auto flex justify-center">
+                <img src="exit.png" alt="Exit" class="w-8 h-8">
+            </button>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <!-- Top bar -->
+            <div class="flex justify-center items-center mb-6 text-[18px]">
+                <!-- Toggle buttons -->
+                <div class="flex bg-gray-10">
+                    <button id="toggle-generate" class="py-2 px-4 w-[300px] text-sm font-medium text-[#433f3a] bg-gray-100 hover:bg-[#e0e0e0] transition duration-200 border border-[#433f3a] rounded-l-[30px] focus:outline-none"
+                        onclick="toggleView('generate')">Generate</button>
+                    <button id="toggle-recipes" class="py-2 px-4 w-[300px] text-sm font-medium text-white bg-[#433f3a] border border-[#433f3a] rounded-r-[30px] focus:outline-none"
+                        onclick="toggleView('recipes')">Recipes</button>
+                </div>
+            </div>
+
+            <!-- Recipes Search Bar -->
+            <div class="flex items-center justify-between mt-2 mb-2">
+                <i class="fas fa-search search-icon text-[#433f3a]"></i>
+                <input type="search" id="search" name="search"
+                class= "text-[20px] w-[535px] h-[40px] mt-1 px-4 py-2 bg-transparent border-[2px] border-[#433f3a] rounded-[30px] pl-10 focus:outline-none focus:ring-1 focus:ring-[#433f3a]">
+            </div>
+            
+            <div class="flex mt-[25px] text-[#433f3a] text-[30px] font-semibold mt-6 mb-2 text-center">
+                Check out these known Filipino Foods!
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="w-[555px] bg-[#fbf8e9] shadow-lg p-4 rounded-l-[30px] flex flex-col justify-between" style="height: calc(100vh - 40px); margin-top: 20px;">
+  
+        </div>
+    </div>
+</body>
+</html>

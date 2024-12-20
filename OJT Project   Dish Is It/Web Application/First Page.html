@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Is It: Recipe Generator</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .no-inter {
+            font-family: 'Monotype Corsiva', cursive;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fullscreen background -->
+    <div class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('first bg.png');">
+        <!-- Logo -->
+        <div class="absolute top-4" style="left: 51px;">
+            <img src="logo.png" alt="Dish Is It Logo" class="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-32 w-auto">
+        </div>
+
+        <!--Text -->
+        <div class="absolute top-[280px] left-6 ml-[85px] text-[#545454]">
+            <!--Title-->
+            <div class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
+            From what you have
+            </div>
+            <div class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl italic mt-6" style="font-family: 'Monotype Corsiva', cursive;">
+                to what you crave
+            </div>
+
+            <!--Short Description-->
+            <div class="text-[25px] mt-5">
+                Make the most of your pantry! Just add your available<br>
+                ingredients, and get tasty recipes customized for you.
+            </div>
+            <!-- Button -->
+            <div class="mt-[65px]">
+                <button class="px-20 py-3 bg-[#545454] text-white text-[20px] rounded-full shadow-lg hover:bg-[#7a736a] transition duration-300 font-sans" 
+                        onclick="window.location.href='Create Acc Page.html';">Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
